@@ -26,7 +26,7 @@ class Game:
             self.dt = self.clock.tick(self.FPS)/1000
 
             self.events()
-            self.updates()
+            self.update()
             self.draw()
 
     def ready(self):
@@ -54,8 +54,9 @@ class Game:
             if event.type == pygame.QUIT:
                 self.is_running = False
 
-    def updates(self):
-        pass
+    def update(self):
+        self.disc_group[0].update()
+        # self.disc_group[1].update()
 
     def draw(self):
         self.screen.fill((0, 0, 0))
