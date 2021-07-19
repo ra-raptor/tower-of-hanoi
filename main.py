@@ -39,10 +39,10 @@ class Game:
         self.tower_3 = Tower(self, self.screen, 898, 280, 4, 200, WHITE)
 
     def create_discs(self):
-        disc_count = 3
+        disc_count = 5
         self.tower_1_count = disc_count
         self.tower_2_count = 0
-        self.tower_3_count = 0
+        self.tower_3_count = 1
         for i in range(disc_count):
             col = random.choice(
                 [RED, GREEN, GOLD, LIME, CYAN, SAND, YELLOW, SALMON, DARKGREEN, NAVYBLUE])
@@ -55,8 +55,8 @@ class Game:
                 self.is_running = False
 
     def update(self):
+
         self.disc_group[0].update()
-        # self.disc_group[1].update()
 
     def draw(self):
         self.screen.fill((0, 0, 0))

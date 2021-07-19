@@ -65,5 +65,5 @@ class Disc:
                 self.animation_stage = 0
 
     def update(self):
-        self.move('C', self.animation_stage)
+        self.move('B', self.animation_stage)
         # self.move('C', 2)
